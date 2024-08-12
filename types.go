@@ -144,14 +144,6 @@ var events = []Event{
 		endTime:     "2024-07-13T18:00:00+02:00",
 	},
 	{
-		name:        "Intro to Gno Tokyo",
-		description: "Join the meetup!",
-		link:        "https://gno.land/r/gnoland/blog:p/gno-tokyo",
-		location:    "Shinjuku City, Tokyo, Japan",
-		startTime:   "2024-04-11T18:30:00+09:00",
-		endTime:     "2024-04-11T22:00:00+09:00",
-	},
-	{
 		name:        "GopherCon US 2024",
 		description: "Come Meet Us at our Booth",
 		link:        "https://www.gophercon.com/",
@@ -166,6 +158,14 @@ var events = []Event{
 		location:    "Berlin, Germany",
 		startTime:   "2024-06-17T10:00:00+02:00",
 		endTime:     "2024-06-20T10:00:00+02:00",
+	},
+	{
+		name:        "Web3 Kamp 2024",
+		description: "Workshop: \"Exploring Web3 Ecosystems - Building a dapp in Go\"",
+		link:        "https://web3kamp.org/",
+		location:    "Petnica, Serbia",
+		startTime:   "2024-08-01T10:00:00+02:00",
+		endTime:     "2024-08-09T17:00:00+02:00",
 	},
 	{
 		name:        "Web3 Summit 2024",

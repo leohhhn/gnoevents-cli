@@ -1,10 +1,10 @@
 package main
 
 import (
+	"fmt"
 	"github.com/gnolang/gno/gno.land/pkg/gnoclient"
 	"github.com/gnolang/gno/gnovm/pkg/gnoenv"
 	rpcclient "github.com/gnolang/gno/tm2/pkg/bft/rpc/client"
-	"github.com/gnolang/gno/tm2/pkg/crypto"
 	"github.com/gnolang/gno/tm2/pkg/crypto/keys"
 )
 
@@ -26,6 +26,16 @@ func main() {
 		ChainID:  "dev",  // id of gno.land chain
 	}
 
+	// get the address with the given name in the signer
+	signerInfo, err := signer.Info()
+	if err != nil {
+		panic(err)
+	}
+
+	// Get address from signer
+	addr := signerInfo.GetAddress()
+	fmt.Println(addr)
+
 	// Initialize the RPC client
 	rpc, err := rpcclient.NewHTTPClient(devRemote)
 	if err != nil {
@@ -36,12 +46,6 @@ func main() {
 	client := gnoclient.Client{
 		Signer:    signer,
 		RPCClient: rpc,
-	}
-
-	// Convert Gno address string to `crypto.Address`
-	addr, err := crypto.AddressFromBech32("g125em6arxsnj49vx35f0n0z34putv5ty3376fg5") // your Gno address
-	if err != nil {
-		panic(err)
 	}
 
 	accountRes, _, err := client.QueryAccount(addr)
