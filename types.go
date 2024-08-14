@@ -81,7 +81,7 @@ var events = []Event{
 	},
 	{
 		name:        "EthCC",
-		description: "Come Meet Us at our Booth",
+		description: "Come meet us at our booth!",
 		link:        "https://ethcc.io/",
 		location:    "Paris, France",
 		startTime:   "2023-07-17T10:00:00+02:00",
@@ -97,7 +97,7 @@ var events = []Event{
 	},
 	{
 		name:        "GopherCon EU 2024",
-		description: "Come Meet Us at our Booth",
+		description: "Come meet us at our booth!",
 		link:        "https://gophercon.eu/",
 		location:    "Berlin, Germany",
 		startTime:   "2023-07-26T10:00:00+02:00",
@@ -105,7 +105,7 @@ var events = []Event{
 	},
 	{
 		name:        "GopherCon US 2024",
-		description: "Come Meet Us at our Booth",
+		description: "Come meet us at our booth!",
 		link:        "https://www.gophercon.com/",
 		location:    "San Diego, US",
 		startTime:   "2023-09-26T10:00:00-07:00",
@@ -145,7 +145,7 @@ var events = []Event{
 	},
 	{
 		name:        "GopherCon US 2024",
-		description: "Come Meet Us at our Booth",
+		description: "Come meet us at our booth!",
 		link:        "https://www.gophercon.com/",
 		location:    "Chicago, US",
 		startTime:   "2024-07-07T10:00:00-06:00",
@@ -153,7 +153,7 @@ var events = []Event{
 	},
 	{
 		name:        "GopherCon EU 2024",
-		description: "Come Meet Us at our Booth",
+		description: "Come meet us at our booth!",
 		link:        "https://www.gophercon.com/",
 		location:    "Berlin, Germany",
 		startTime:   "2024-06-17T10:00:00+02:00",
@@ -168,8 +168,8 @@ var events = []Event{
 		endTime:     "2024-08-09T17:00:00+02:00",
 	},
 	{
-		name:        "Web3 Summit 2024",
-		description: "Side Event: BUIDL with Cosmos Tooling",
+		name:        "BUIDL with Cosmos Tooling",
+		description: "Join us at our side event during Web3 Summit!",
 		link:        "https://www.eventbrite.com/e/buidl-with-cosmos-tooling-tickets-981775686507?aff=oddtdtcreator",
 		location:    "Berlin, Germany",
 		startTime:   "2024-08-20T17:00:00+02:00",
