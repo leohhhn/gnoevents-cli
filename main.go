@@ -55,13 +55,15 @@ func main() {
 
 	txCfg := gnoclient.BaseTxCfg{
 		GasFee:         "1000000ugnot",                // gas price
-		GasWanted:      1000000000,                    // gas limit
+		GasWanted:      100000000,                     // gas limit
 		AccountNumber:  accountRes.GetAccountNumber(), // account ID
 		SequenceNumber: accountRes.GetSequence(),      // account nonce
 		Memo:           "",                            // transaction memo
 	}
 
 	msgs := make([]gnoclient.MsgCall, 0, len(events))
+
+	fmt.Printf("Adding %d events\n", len(events))
 
 	for _, e := range events {
 		msg := gnoclient.MsgCall{
