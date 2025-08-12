@@ -2,22 +2,23 @@ module gnoevents-cli
 
 go 1.22.3
 
+require github.com/gnolang/gno v0.2.0
+
 require (
-	github.com/btcsuite/btcd/btcec/v2 v2.3.3 // indirect
+	github.com/btcsuite/btcd/btcec/v2 v2.3.4 // indirect
 	github.com/btcsuite/btcd/btcutil v1.1.5 // indirect
 	github.com/cenkalti/backoff/v4 v4.3.0 // indirect
 	github.com/cockroachdb/apd/v3 v3.2.1 // indirect
 	github.com/cosmos/ledger-cosmos-go v0.13.3 // indirect
 	github.com/davecgh/go-spew v1.1.1 // indirect
 	github.com/decred/dcrd/dcrec/secp256k1/v4 v4.3.0 // indirect
-	github.com/gnolang/gno v0.1.1 // indirect
 	github.com/gnolang/overflow v0.0.0-20170615021017-4d914c927216 // indirect
 	github.com/go-logr/logr v1.4.2 // indirect
 	github.com/go-logr/stdr v1.2.2 // indirect
 	github.com/golang/protobuf v1.5.4 // indirect
 	github.com/golang/snappy v0.0.4 // indirect
 	github.com/google/uuid v1.6.0 // indirect
-	github.com/gorilla/websocket v1.5.1 // indirect
+	github.com/gorilla/websocket v1.5.3 // indirect
 	github.com/grpc-ecosystem/grpc-gateway/v2 v2.20.0 // indirect
 	github.com/libp2p/go-buffer-pool v0.1.0 // indirect
 	github.com/pkg/errors v0.9.1 // indirect

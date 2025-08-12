@@ -3,6 +3,7 @@ package main
 import (
 	"fmt"
 	"github.com/gnolang/gno/gno.land/pkg/gnoclient"
+	"github.com/gnolang/gno/gno.land/pkg/sdk/vm"
 	"github.com/gnolang/gno/gnovm/pkg/gnoenv"
 	rpcclient "github.com/gnolang/gno/tm2/pkg/bft/rpc/client"
 	"github.com/gnolang/gno/tm2/pkg/crypto/keys"
@@ -11,7 +12,7 @@ import (
 const (
 	eventsRealmPath = "gno.land/r/gnoland/events"
 	devRemote       = "localhost:26657"
-	plRemote        = "https://rpc.gno.land:443"
+	plRemote        = "https://rpc.staging.gno.land:443"
 )
 
 func main() {
@@ -21,9 +22,9 @@ func main() {
 	// Create signer
 	signer := gnoclient.SignerFromKeybase{
 		Keybase:  keybase,
-		Account:  "main", // Name of your keypair in keybase
-		Password: "",     // Password to decrypt your keypair
-		ChainID:  "dev",  // id of gno.land chain
+		Account:  "main",    // Name of your keypair in keybase
+		Password: "",        // Password to decrypt your keypair
+		ChainID:  "staging", // id of gno.land chain
 	}
 
 	// get the address with the given name in the signer
@@ -37,7 +38,7 @@ func main() {
 	fmt.Println(addr)
 
 	// Initialize the RPC client
-	rpc, err := rpcclient.NewHTTPClient(devRemote)
+	rpc, err := rpcclient.NewHTTPClient(plRemote)
 	if err != nil {
 		panic(err)
 	}
@@ -61,17 +62,17 @@ func main() {
 		Memo:           "",                            // transaction memo
 	}
 
-	msgs := make([]gnoclient.MsgCall, 0, len(events))
+	msgs := make([]vm.MsgCall, 0, len(events))
 
 	fmt.Printf("Adding %d events\n", len(events))
 
 	for _, e := range events {
-		msg := gnoclient.MsgCall{
-			PkgPath:  eventsRealmPath,
-			FuncName: "AddEvent",
-			Args:     e.ToArgSlice(),
+		msg := vm.MsgCall{
+			Caller:  addr,
+			PkgPath: eventsRealmPath,
+			Func:    "AddEvent",
+			Args:    e.ToArgSlice(),
 		}
-
 		msgs = append(msgs, msg)
 	}
 
