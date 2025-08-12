@@ -22,9 +22,9 @@ func main() {
 	// Create signer
 	signer := gnoclient.SignerFromKeybase{
 		Keybase:  keybase,
-		Account:  "main",    // Name of your keypair in keybase
-		Password: "",        // Password to decrypt your keypair
-		ChainID:  "staging", // id of gno.land chain
+		Account:  "main", // Name of your keypair in keybase
+		Password: "",     // Password to decrypt your keypair
+		ChainID:  "dev",  // id of gno.land chain
 	}
 
 	// get the address with the given name in the signer
@@ -35,10 +35,10 @@ func main() {
 
 	// Get address from signer
 	addr := signerInfo.GetAddress()
-	fmt.Println(addr)
+	fmt.Println("Deployer: " + addr.String())
 
 	// Initialize the RPC client
-	rpc, err := rpcclient.NewHTTPClient(plRemote)
+	rpc, err := rpcclient.NewHTTPClient(devRemote)
 	if err != nil {
 		panic(err)
 	}
@@ -56,7 +56,7 @@ func main() {
 
 	txCfg := gnoclient.BaseTxCfg{
 		GasFee:         "1000000ugnot",                // gas price
-		GasWanted:      100000000,                     // gas limit
+		GasWanted:      1000000000,                    // gas limit
 		AccountNumber:  accountRes.GetAccountNumber(), // account ID
 		SequenceNumber: accountRes.GetSequence(),      // account nonce
 		Memo:           "",                            // transaction memo
