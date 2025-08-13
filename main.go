@@ -22,9 +22,9 @@ func main() {
 	// Create signer
 	signer := gnoclient.SignerFromKeybase{
 		Keybase:  keybase,
-		Account:  "main", // Name of your keypair in keybase
-		Password: "",     // Password to decrypt your keypair
-		ChainID:  "dev",  // id of gno.land chain
+		Account:  "main",    // Name of your keypair in keybase
+		Password: "",        // Password to decrypt your keypair
+		ChainID:  "staging", // id of gno.land chain
 	}
 
 	// get the address with the given name in the signer
@@ -38,7 +38,7 @@ func main() {
 	fmt.Println("Deployer: " + addr.String())
 
 	// Initialize the RPC client
-	rpc, err := rpcclient.NewHTTPClient(devRemote)
+	rpc, err := rpcclient.NewHTTPClient(plRemote)
 	if err != nil {
 		panic(err)
 	}

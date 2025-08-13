@@ -171,7 +171,7 @@ var events = []Event{
 		endTime:     "2025-02-02T18:00:00+02:00",
 	},
 	{
-		name:        "Writing Smart Contracts in Go",
+		name:        "DAOs in Gno.land",
 		description: "Come hear about Gno.land DAOs at the ETH Belgrade Community Meetup #19",
 		link:        "https://lu.ma/ijajcx4g",
 		location:    "Belgrade, Serbia",
