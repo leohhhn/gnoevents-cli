@@ -226,4 +226,12 @@ var events = []Event{
 		startTime:   "2025-08-13T00:00:00+02:00",
 		endTime:     "2025-08-15T00:00:00+02:00",
 	},
+	{
+		name:        "Gno Meetup #2 - Rooftop Edition",
+		description: "Join us for a chill rooftop meetup in Belgrade.",
+		link:        "https://luma.com/6eu59psq",
+		location:    "Belgrade, Serbia",
+		startTime:   "2025-08-28T19:00:00+02:00",
+		endTime:     "2025-08-28T2:00:00+02:00",
+	},
 }
