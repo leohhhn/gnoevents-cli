@@ -10,7 +10,7 @@ import (
 )
 
 const (
-	eventsRealmPath = "gno.land/r/gnoland/events"
+	eventsRealmPath = "gno.land/r/devrels/events"
 	devRemote       = "localhost:26657"
 	plRemote        = "https://rpc.staging.gno.land:443"
 )

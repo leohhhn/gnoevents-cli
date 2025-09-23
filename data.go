@@ -234,4 +234,12 @@ var events = []Event{
 		startTime:   "2025-08-28T19:00:00+02:00",
 		endTime:     "2025-08-28T2:00:00+02:00",
 	},
+	{
+		name:        "Gno Seoul - KBW Edition",
+		description: "Join us for an easy night in Seoul during KBW 2025!",
+		link:        "https://luma.com/5b4h90tb",
+		location:    "Seoul, South Korea",
+		startTime:   "2025-09-25T18:00:00+09:00",
+		endTime:     "2025-09-25T22:00:00+09:00",
+	},
 }
