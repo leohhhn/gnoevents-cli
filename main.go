@@ -80,4 +80,6 @@ func main() {
 	if err != nil {
 		panic(err)
 	}
+
+	fmt.Println("Finished adding 30 events!")
 }
